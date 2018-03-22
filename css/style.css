@@ -3,9 +3,13 @@
   padding: 0;
   font-family: sans-serif, 'Arial'; }
 
+.side-nav {
+  display: none; }
+
 header {
   background: #000;
   display: flex;
+  position: fixed;
   width: 100%; }
   header #hamburger {
     color: #fff;
@@ -17,35 +21,180 @@ header {
 
 .intro-text {
   background: #FFF;
-  border-bottom: 1px solid #000;
-  border-top: 1px solid #000;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
   padding: 36px 10px 40px 10px; }
   .intro-text p {
     font-size: 14px;
     line-height: 22px;
     text-align: center; }
 
+.banner-img #imageMobile {
+  display: block;
+  width: 100%; }
+.banner-img #imageDesktop {
+  display: none; }
+
 .card {
   display: flex;
   width: 100vw; }
+  .card img {
+    width: 50%;
+    align-self: flex-start; }
   .card .card-text {
-    margin: 20px;
-    width: 50%; }
+    padding: 20px;
+    width: 50vw;
+    min-height: 50vw;
+    box-sizing: border-box; }
     .card .card-text h4 {
       margin-bottom: 10px; }
     .card .card-text p {
-      font-size: 12px;
-      line-height: 20px; }
+      font-size: 11px;
+      line-height: 16px; }
     .card .card-text .phone-wrapper {
       margin-top: 16px; }
-  .card .card-img {
-    width: 50%; }
+    .card .card-text .social-media {
+      display: flex;
+      justify-content: space-around;
+      font-size: 30px;
+      margin-top: 16px; }
 
 .card1 iframe {
-  height: 200px; }
+  width: 50%;
+  order: 2; }
+.card1 .fa-phone {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg); }
 
 .card2 .button {
-  display: inline-block;
-  background: yellow; }
+  color: #FFF;
+  background: #000;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 16px;
+  padding: 5px 7px; }
+.card2 .fa-caret-right {
+  font-size: 20px;
+  margin-left: 7px; }
+
+.card3 img {
+  order: 2; }
+
+@media only screen and (max-width: 370px) {
+  .card {
+    display: block; }
+    .card iframe {
+      height: 100vw;
+      width: 100vw; }
+    .card img {
+      width: 100vw; }
+    .card .card-text {
+      width: 100vw; }
+      .card .card-text p {
+        font-size: 12px; } }
+@media only screen and (min-width: 500px) {
+  .card .card-text {
+    padding: 5%; }
+    .card .card-text h4 {
+      font-size: 3vw;
+      margin-bottom: 5%; }
+    .card .card-text p {
+      font-size: 2vw;
+      line-height: 3vw; }
+    .card .card-text .social-media {
+      margin-top: 10%;
+      font-size: 6vw; }
+
+  .intro-text {
+    padding: 7% 10%; }
+    .intro-text p {
+      font-size: 3vw;
+      line-height: 4vw; } }
+@media only screen and (min-width: 768px) {
+  .card .card-text {
+    padding: 5%; }
+    .card .card-text h4 {
+      font-size: 23px;
+      margin-bottom: 15px; }
+    .card .card-text p {
+      font-size: 2vw;
+      line-height: 3.5vw; }
+    .card .card-text .social-media {
+      margin-top: 10%;
+      font-size: 6vw; }
+
+  .intro-text {
+    padding: 7% 10%; }
+    .intro-text p {
+      font-size: 22px;
+      line-height: 4vw; } }
+@media only screen and (min-width: 1280px) {
+  .side-nav {
+    background: #000;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25vw; }
+    .side-nav img {
+      display: block;
+      margin: 10px auto;
+      width: 50%;
+      text-align: center; }
+
+  header {
+    display: none; }
+
+  .main-content {
+    position: absolute;
+    left: 25vw;
+    width: 74vw; }
+    .main-content .banner-img #imageMobile {
+      display: none; }
+    .main-content .banner-img #imageDesktop {
+      display: block;
+      width: 100%; }
+    .main-content .intro-text {
+      background: rgba(255, 255, 255, 0.6);
+      position: absolute;
+      top: 335px;
+      padding: 3% 30%; }
+      .main-content .intro-text p {
+        font-size: 15px;
+        line-height: 22px; }
+    .main-content .card {
+      display: flex;
+      width: 100%; }
+      .main-content .card img {
+        flex: 1; }
+      .main-content .card .card-text {
+        flex: 1;
+        min-height: auto;
+        padding: 50px;
+        box-sizing: border-box; }
+        .main-content .card .card-text h4 {
+          margin-bottom: 10px; }
+        .main-content .card .card-text p {
+          font-size: 11px;
+          line-height: 16px; }
+        .main-content .card .card-text .phone-wrapper {
+          margin-top: 16px; }
+        .main-content .card .card-text .social-media {
+          display: flex;
+          justify-content: space-around;
+          font-size: 30px;
+          margin-top: 16px; }
+    .main-content .card1 {
+      display: none; }
+    .main-content .card2 img {
+      order: 2; }
+    .main-content .card3 .card-text {
+      order: 2; }
+    .main-content .card4 img {
+      order: 2; } }
+/*END*/
 
 /*# sourceMappingURL=style.css.map */

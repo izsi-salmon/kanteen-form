@@ -4,9 +4,14 @@
     font-family: sans-serif, 'Arial';
 }
 
+.side-nav{
+    display: none;
+}
+
 header{
     background: #000;
     display: flex;
+    position: fixed;
     width: 100%;
     #hamburger{
         color: #fff;
@@ -21,8 +26,8 @@ header{
 
 .intro-text{
     background: #FFF;
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
     padding: 36px 10px 40px 10px;
     p{
         font-size: 14px;
@@ -31,37 +36,279 @@ header{
     }
 }
 
+.banner-img{
+    #imageMobile{
+        display: block;
+        width: 100%;
+    }
+    #imageDesktop{
+        display: none;
+    }
+}
+
 .card{
     display: flex;
     width: 100vw;
-    .card-text{
-        margin: 20px;
+    img{
         width: 50%;
+        align-self: flex-start;    
+        }
+    .card-text{
+        padding: 20px;
+        width: 50vw;
+        min-height: 50vw;
+        box-sizing: border-box;
         h4{
             margin-bottom: 10px;
         }
         p{
-            font-size: 12px;
-            line-height: 20px;
+            font-size: 11px;
+            line-height: 16px;
         }
         .phone-wrapper{
             margin-top: 16px;
         }
-    }
-    .card-img{
-        width: 50%;
+        .social-media{
+            display: flex;
+                justify-content: space-around;
+            font-size: 30px;
+            margin-top: 16px;
+        }
     }
 }
 
 .card1{
     iframe{
-        height: 200px;
+        width: 50%;
+        order: 2;
+    }
+    .fa-phone{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
     }
 }
 
 .card2{
     .button{
-        display: inline-block;
-        background: yellow;
+        color: #FFF;
+        background: #000;
+        display: inline-flex;
+            align-items: center;
+        margin-top: 16px;
+        padding: 5px 7px;
+    }
+    .fa-caret-right{
+        font-size: 20px;
+        margin-left: 7px;
     }
 }
+
+.card3{
+    img{
+        order: 2;
+    }
+}
+
+@media only screen and (max-width: 370px){
+    .card{
+        display: block;
+        iframe{
+            height: 100vw;
+            width: 100vw;
+        }
+        img{
+            width: 100vw;
+        }
+        .card-text{
+            width: 100vw;
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 500px){
+    .card{
+        .card-text{
+            padding: 5%;
+            h4{
+                font-size: 3vw;
+                margin-bottom: 5%;
+            }
+            p{
+                font-size: 2vw;
+                line-height: 3vw;
+            }
+            .social-media{
+                margin-top: 10%;
+                font-size: 6vw;
+            }
+        }
+    }
+    
+    .intro-text{
+        padding: 7% 10%;
+        p{
+            font-size: 3vw;
+            line-height: 4vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .card{
+        .card-text{
+            padding: 5%;
+            h4{
+                font-size: 23px;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size: 2vw;
+                line-height: 3.5vw;
+            }
+            .social-media{
+                margin-top: 10%;
+                font-size: 6vw;
+            }
+        }
+    }
+    
+    .intro-text{
+        padding: 7% 10%;
+        p{
+            font-size: 22px;
+            line-height: 4vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px){
+    
+    .side-nav{
+        background: #000;
+        display: block;
+        position: fixed;
+            top: 0;
+            left: 0;
+        height: 100vh;
+        width: 25vw;
+        img{
+            display: block;
+            margin: 10px auto;
+            width: 50%;
+            text-align: center;
+        }
+    }
+     
+    header{
+        display: none;
+    }
+    
+    .main-content{
+        position: absolute;
+            left: 25vw;
+        width: 74vw;
+        .banner-img{
+            #imageMobile{
+                display: none;
+            }
+            #imageDesktop{
+                display: block;
+                width: 100%;
+            }
+        }
+        .intro-text{
+            background: rgba(255, 255, 255, 0.6);
+            position: absolute;
+                top: 335px;
+            padding: 3% 30%;
+            p{
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+        .card{
+            display: flex;
+            width: 100%;
+            img{
+                flex: 1;    
+                }
+            .card-text{
+                flex: 1;
+                min-height: auto;
+                padding: 50px;
+                box-sizing: border-box;
+                h4{
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+                .phone-wrapper{
+                    margin-top: 16px;
+                }
+                .social-media{
+                    display: flex;
+                        justify-content: space-around;
+                    font-size: 30px;
+                    margin-top: 16px;
+                }
+            }
+        }
+        
+        .card1{
+            display: none;
+        }
+        
+        .card2{
+            img{
+                order: 2;
+            }
+        }
+        
+        .card3{
+            .card-text{
+                order: 2;
+            }
+        }
+        
+        .card4{
+            img{
+                order: 2;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*END*/
