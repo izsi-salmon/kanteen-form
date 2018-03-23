@@ -4,17 +4,87 @@
   font-family: sans-serif, 'Arial'; }
 
 .side-nav {
-  display: none; }
+  background: #000;
+  color: #FFF;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 0;
+  z-index: 10000; }
+  .side-nav img {
+    display: none; }
+  .side-nav .nav-header {
+    display: block;
+    width: 80vw; }
+    .side-nav .nav-header #hamburgerNav {
+      float: left;
+      position: fixed;
+      color: #fff;
+      font-size: 36px;
+      margin: 8px 10px 0 10px; }
+    .side-nav .nav-header img {
+      display: block;
+      height: 50px;
+      margin: auto; }
+  .side-nav nav {
+    margin: 20px auto;
+    font-size: 12px;
+    width: 80%;
+    text-align: center; }
+    .side-nav nav a {
+      color: #FFF;
+      display: block;
+      margin: 6% 0;
+      text-decoration: none;
+      text-transform: uppercase; }
+  .side-nav .nav-contact {
+    margin: 0 auto;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 90%; }
+    .side-nav .nav-contact .nav-social-media {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      font-size: 28px;
+      margin: 20px auto;
+      width: 60%; }
+    .side-nav .nav-contact .line {
+      width: 90%;
+      border-bottom: 0.75px solid #FFF;
+      margin: auto; }
+    .side-nav .nav-contact .nav-address {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px; }
+      .side-nav .nav-contact .nav-address .nav-p-wrapper p {
+        font-size: 12px;
+        line-height: 20px; }
+      .side-nav .nav-contact .nav-address .nav-if-wrapper {
+        width: 50%; }
+        .side-nav .nav-contact .nav-address .nav-if-wrapper iframe {
+          max-width: 100%;
+          height: 140px; }
+
+.side-nav-width {
+  width: 80vw;
+  display: block; }
 
 header {
   background: #000;
   display: flex;
   position: fixed;
   width: 100%; }
-  header #hamburger {
+  header #hamburgerHeader {
     color: #fff;
     font-size: 36px;
-    margin: 8px 10px 0px 10px; }
+    margin: 8px 10px 0 10px;
+    position: fixed; }
   header img {
     margin: 0 auto;
     height: 50px; }
@@ -82,6 +152,47 @@ header {
 .card3 img {
   order: 2; }
 
+.margin-buffer {
+  height: 50px; }
+
+.menu-tabs {
+  display: flex; }
+  .menu-tabs .tab {
+    background: #B3B3B3;
+    color: #9E9E9E;
+    display: inline-block;
+    text-align: center;
+    padding: 20px 0;
+    width: 35%; }
+    .menu-tabs .tab a {
+      color: #9E9E9E;
+      text-decoration: none; }
+  .menu-tabs .active-tab {
+    background: #FFF; }
+    .menu-tabs .active-tab a {
+      color: #000; }
+
+.top-note {
+  font-size: 12px;
+  margin: 40px auto;
+  text-align: center; }
+
+.menu-section {
+  margin: 0 auto 50px auto;
+  font-size: 14px;
+  width: 80%; }
+  .menu-section h4 {
+    text-align: center;
+    margin-bottom: 10px; }
+  .menu-section .column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .menu-section .column-wrapper .column {
+      max-width: 70%; }
+      .menu-section .column-wrapper .column p {
+        line-height: 26px; }
+
 @media only screen and (max-width: 370px) {
   .card {
     display: block; }
@@ -112,7 +223,13 @@ header {
     .intro-text p {
       font-size: 3vw;
       line-height: 4vw; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
+  .side-nav .nav-header {
+    width: 50vw; }
+
+  .side-nav-width {
+    width: 50vw; }
+
   .card .card-text {
     padding: 5%; }
     .card .card-text h4 {
@@ -130,20 +247,22 @@ header {
     .intro-text p {
       font-size: 22px;
       line-height: 4vw; } }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 850px) {
   .side-nav {
-    background: #000;
     display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
     width: 25vw; }
     .side-nav img {
       display: block;
       margin: 10px auto;
-      width: 50%;
+      width: 60%;
       text-align: center; }
+    .side-nav .nav-header {
+      display: none; }
+    .side-nav .nav-address .nav-if-wrapper {
+      width: 50%; }
+      .side-nav .nav-address .nav-if-wrapper iframe {
+        max-width: 100%;
+        height: 100px !important; }
 
   header {
     display: none; }
