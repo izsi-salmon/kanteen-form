@@ -173,12 +173,31 @@ header {
       color: #000; }
 
 .top-note {
+  color: #4D4D4D;
   font-size: 12px;
   margin: 40px auto;
   text-align: center; }
 
+.diet-key {
+  margin-top: -15px;
+  font-size: 10px;
+  word-spacing: 10px; }
+
+.diet-option {
+  color: #fa0c00;
+  border: 1px solid #fa0c00;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  margin-right: 4px;
+  padding: 3px;
+  text-align: center; }
+
+.veg {
+  padding: 3px 5px; }
+
 .menu-section {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 40px auto;
   font-size: 14px;
   width: 80%; }
   .menu-section h4 {
@@ -187,7 +206,8 @@ header {
   .menu-section .column-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; }
+    align-items: flex-end;
+    margin-bottom: 20px; }
     .menu-section .column-wrapper .column {
       max-width: 70%; }
       .menu-section .column-wrapper .column p {
