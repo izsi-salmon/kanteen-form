@@ -7,7 +7,6 @@
 .side-nav{
     background: #000;
     color: #FFF;
-    display: none;
     position: fixed;
         top: 0;
         left: 0;
@@ -15,34 +14,28 @@
     height: 100vh;
     width: 0;
     z-index: 10000;
+    transition: width 0.2s;
+    -webkit-transition: width 0.2s;
+    -mos-transition: width 0.2s;
+    -ms-transition: width 0.2s;
+    -o-transition: width 0.2s;
+    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+    -mos-transition-timing-function: ease-out;
+    -ms-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
     img{
         display: none;
     }
-    .nav-header{
-        display: block;
-        width: 80vw;
-        #hamburgerNav{
-            float: left;
-            position: fixed;
-            color: #fff;
-            font-size: 36px;
-            margin: 8px 10px 0 10px;
-        }
-        img{
-            display: block;
-            height: 50px;
-            margin: auto;
-        }
-    }
     nav{
-        margin: 20px auto;
+        margin: 100px auto;
         font-size: 12px;
         width: 80%;
         text-align: center;
         a{
             color: #FFF;
             display: block;
-            margin: 6% 0;
+            margin: 10% 0;
             text-decoration: none;
             text-transform: uppercase;
         }
@@ -90,7 +83,6 @@
 
 .side-nav-width{
     width: 80vw;
-    display: block;
 }
 
 header{
@@ -98,6 +90,7 @@ header{
     display: flex;
     position: fixed;
     width: 100%;
+    z-index: 1000000;
     #hamburgerHeader{
         color: #fff;
         font-size: 36px;
@@ -351,6 +344,15 @@ header{
 }
 
 @media only screen and (min-width: 500px){
+    
+    .side-nav{
+        nav{
+            a{
+                margin: 7%;
+            }
+        }
+    }
+    
     .card{
         .card-text{
             padding: 5%;
@@ -379,12 +381,6 @@ header{
 }
 
 @media only screen and (min-width: 600px){
-    
-    .side-nav{
-        .nav-header{
-            width: 50vw;
-        }
-    }
     
     .side-nav-width{
         width: 50vw;
@@ -428,8 +424,11 @@ header{
             width: 60%;
             text-align: center;
         }
-        .nav-header{
-            display: none;
+        nav{
+            margin: 30px auto;
+            .nav-home{
+                display: none;
+            }
         }
         .nav-address{
                 .nav-if-wrapper{

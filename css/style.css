@@ -6,38 +6,34 @@
 .side-nav {
   background: #000;
   color: #FFF;
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   overflow: hidden;
   height: 100vh;
   width: 0;
-  z-index: 10000; }
+  z-index: 10000;
+  transition: width 0.2s;
+  -webkit-transition: width 0.2s;
+  -mos-transition: width 0.2s;
+  -ms-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  -mos-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out; }
   .side-nav img {
     display: none; }
-  .side-nav .nav-header {
-    display: block;
-    width: 80vw; }
-    .side-nav .nav-header #hamburgerNav {
-      float: left;
-      position: fixed;
-      color: #fff;
-      font-size: 36px;
-      margin: 8px 10px 0 10px; }
-    .side-nav .nav-header img {
-      display: block;
-      height: 50px;
-      margin: auto; }
   .side-nav nav {
-    margin: 20px auto;
+    margin: 100px auto;
     font-size: 12px;
     width: 80%;
     text-align: center; }
     .side-nav nav a {
       color: #FFF;
       display: block;
-      margin: 6% 0;
+      margin: 10% 0;
       text-decoration: none;
       text-transform: uppercase; }
   .side-nav .nav-contact {
@@ -72,14 +68,14 @@
           height: 140px; }
 
 .side-nav-width {
-  width: 80vw;
-  display: block; }
+  width: 80vw; }
 
 header {
   background: #000;
   display: flex;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000000; }
   header #hamburgerHeader {
     color: #fff;
     font-size: 36px;
@@ -267,6 +263,9 @@ header {
       .card .card-text p {
         font-size: 12px; } }
 @media only screen and (min-width: 500px) {
+  .side-nav nav a {
+    margin: 7%; }
+
   .card .card-text {
     padding: 5%; }
     .card .card-text h4 {
@@ -285,9 +284,6 @@ header {
       font-size: 3vw;
       line-height: 4vw; } }
 @media only screen and (min-width: 600px) {
-  .side-nav .nav-header {
-    width: 50vw; }
-
   .side-nav-width {
     width: 50vw; }
 
@@ -317,8 +313,10 @@ header {
       margin: 10px auto;
       width: 60%;
       text-align: center; }
-    .side-nav .nav-header {
-      display: none; }
+    .side-nav nav {
+      margin: 30px auto; }
+      .side-nav nav .nav-home {
+        display: none; }
     .side-nav .nav-address .nav-if-wrapper {
       width: 50%; }
       .side-nav .nav-address .nav-if-wrapper iframe {
