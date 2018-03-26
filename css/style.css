@@ -269,8 +269,7 @@ header {
   .card .card-text {
     padding: 5%; }
     .card .card-text h4 {
-      font-size: 3vw;
-      margin-bottom: 5%; }
+      font-size: 3vw; }
     .card .card-text p {
       font-size: 2vw;
       line-height: 3vw; }
@@ -314,14 +313,26 @@ header {
       width: 60%;
       text-align: center; }
     .side-nav nav {
+      font-size: 1.1vw;
       margin: 30px auto; }
       .side-nav nav .nav-home {
         display: none; }
-    .side-nav .nav-address .nav-if-wrapper {
-      width: 50%; }
-      .side-nav .nav-address .nav-if-wrapper iframe {
-        max-width: 100%;
-        height: 100px !important; }
+    .side-nav .nav-contact {
+      margin: 0 auto;
+      position: absolute;
+      left: 15px;
+      bottom: 15px;
+      width: 90%; }
+      .side-nav .nav-contact .nav-social-media {
+        font-size: 200%; }
+      .side-nav .nav-contact .nav-address .nav-p-wrapper p {
+        font-size: 16px;
+        line-height: 28px; }
+      .side-nav .nav-contact .nav-address .nav-if-wrapper {
+        width: 50%; }
+        .side-nav .nav-contact .nav-address .nav-if-wrapper iframe {
+          max-width: 100%;
+          height: 150px !important; }
 
   header {
     display: none; }
@@ -342,11 +353,11 @@ header {
       box-sizing: border-box;
       position: absolute;
       top: 280px;
-      padding: 4.5% 30%;
+      padding: 3.5% 30%;
       height: 170px; }
       .main-content .intro-text p {
-        font-size: 15px;
-        line-height: 22px; }
+        font-size: 120%;
+        line-height: 24px; }
     .main-content .card {
       display: flex;
       width: 100%; }
@@ -356,19 +367,24 @@ header {
       .main-content .card .card-text {
         flex: 1;
         min-height: auto;
-        padding: 50px;
+        padding: 7%;
         box-sizing: border-box; }
         .main-content .card .card-text h4 {
-          margin-bottom: 10px; }
+          font-size: 2vw;
+          margin-bottom: 3%; }
         .main-content .card .card-text p {
-          font-size: 11px;
-          line-height: 16px; }
+          font-size: 1.3vw;
+          line-height: 2vw; }
+        .main-content .card .card-text .p-margin {
+          margin-bottom: 10%; }
+        .main-content .card .card-text .button {
+          margin: 0; }
         .main-content .card .card-text .phone-wrapper {
           margin-top: 16px; }
         .main-content .card .card-text .social-media {
           display: flex;
           justify-content: space-around;
-          font-size: 30px;
+          font-size: 40px;
           margin-top: 16px; }
     .main-content .card1 {
       display: none; }
